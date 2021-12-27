@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweets&Drinks</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 
 <body>
@@ -14,13 +15,13 @@
           <label for="userN"><b>Name</b></label>
             <input type="text" placeholder="Bitte geben Sie Ihr Name ein" name="userN" id="userNameInput" required>
           <label for="psw"><b>Kennwort</b></label>
-            <input type="text" placeholder="Kennwort eingeben" name="psw" onkeyup="onPasswordChanged()" id="passwordInput" required>
+            <input type="password" placeholder="Kennwort eingeben" name="psw" onkeyup="onPasswordChanged()" id="passwordInput" required>
             <p id="msg"></p>
-            <button type="submit" id="passwordButton" disabled="true" onclick="onButtonClick()">Anmelden</button>
+            <button type="submit" id="passwordButton" disabled="true">Anmelden</button>
         </div>
     </form>
 
-    <script src="login.js"></script>
+
 </body>
 
 </html>

@@ -4,9 +4,14 @@ form {
     border: 3px solid #f1f1f1;
 }
 
+form li {
+    list-style: none;
+    margin-bottom: 5px;
+    }
+
 /* Full-width inputs */
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], button {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

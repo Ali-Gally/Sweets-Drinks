@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel='stylesheet' href='login.css' type='text/css' />
+  <script src="login.js"></script>
+
+  <title>Sweets&Drinks</title>
+</head>
+
+<body>
+  <form name='registration' onSubmit="return formValidation();">
+    <div class="container">
+    <label for="userN">Name</label>
+    <input type="text" name="userN" id="userNameInput" required/>
+    <label for="adrs">Straße und Nr.</label>
+    <input type="text" name="adrs" id= "addressInput" required/>
+    <label for="adrs">PLZ, Ort</label>
+    <input type="text" name="adrs" id= "addressInput" required/>
+    <label for="eml">E-Mail:</label>
+    <input type="text" name="eml" id= "emailInput" required/>
+    <label for="psw"><b>Kennwort</b></label>
+    <input type="password" placeholder="Kennwort eingeben" name="psw" onkeyup="onPasswordChanged()" id="passwordInput" required>
+    <p id="msg"></p>
+    <button type="submit" id="passwordButton" disabled="true">Registrieren</button>
+  </div>
+    </form>
+</body>
+</html>

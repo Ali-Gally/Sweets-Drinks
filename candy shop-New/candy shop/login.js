@@ -1,14 +1,17 @@
-let userName;
-let passwordInput;
+let userN;
+let psw;
 let messageText;
 let setPasswordButton;
+let adrs;
+let eml;
 
 onload = function (event) {
-    userNameInput = document.getElementById('userNameInput');
+    userN = document.getElementById('userNameInput');
     passwordInput = document.getElementById('passwordInput');
     messageText = document.getElementById('msg');
-    console.log(messageText);
     setPasswordButton = document.getElementById('passwordButton');
+    adresse = document.getElementById('addressInput');
+    eml = document.getElementById('emailInput');
 }
 
 function onPasswordChanged() {
@@ -38,8 +41,56 @@ function onPasswordChanged() {
     messageText.innerText = message;
 }
 
-function onButtonClick() {
-    alert('Kennwort gespeichert');
-    messageText.innerText = '';
-    passwordInput.value = '';
+
+function formValidation()
+{
+var psw = document.registration.psw;
+var userN = document.registration.userN;
+var adrs = document.registration.adrs;
+var eml = document.registration.eml;
+{
+if(psw_validation(psw,7,12))
+{
+if(allLetter(userN))
+{
+if(alphanumeric(adrs))
+{ 
+if(ValidateEmail(eml))
+{
+} 
+} 
+}
+}
+}
+valid = false;
+}
+
+function allLetter(userN)
+{ 
+var letters = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\W\S_]{5,}$/;
+if(userN.value.match(letters))
+{
+valid = true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+userN.focus();
+valid = false;
+}
+}
+
+function alphanumeric(adrs)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(adrs.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+adrs.focus();
+return false;
+}
 }
